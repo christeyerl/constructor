@@ -1,0 +1,26 @@
+<section id="testimonials">
+    <div class="mx-auto max-w-[88rem] px-8 py-20 lg:py-32">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
+            <div>
+                <h2 class="text-balance text-2xl !leading-tight sm:text-3xl md:text-4xl lg:text-[2.5rem]">
+                    {{ heading }}
+                </h2>
+            </div>
+            <div
+                id="testimonial-slider"
+                class="swiper"
+            >
+                <div class="swiper-wrapper">
+                    {{ testimonials }}
+                        <div class="swiper-slide !w-full">
+                            <blockquote>
+                                <p class="text-balance text-xl sm:text-2xl">“{{ quote }}”</p>
+                            </blockquote>
+                            <p class="mt-2">- {{ author }}</p>
+                        </div>
+                    {{ /testimonials }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

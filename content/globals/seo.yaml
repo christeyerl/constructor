@@ -1,0 +1,17 @@
+title: SEO
+data:
+  schema_organization:
+    company: null
+  schema_place:
+    name: null
+  schema_person:
+    name: null
+  links:
+    -
+      id: m31jeneg
+      network: Facebook
+      url: 'https://facebook.com'
+    -
+      id: m31jexra
+      network: Instagram
+      url: 'https://instagram.com'

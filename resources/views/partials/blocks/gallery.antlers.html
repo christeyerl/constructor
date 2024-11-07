@@ -1,0 +1,27 @@
+<section id="gallery">
+    <div class="bg-slate-50">
+        <div class="mx-auto max-w-[88rem] px-8 py-20 lg:py-32">
+            <div class="max-w-2xl">
+                <h2 class="text-balance text-2xl !leading-tight sm:text-3xl md:text-4xl lg:text-[2.5rem]">
+                    {{ heading }}
+                </h2>
+            </div>
+            <div class="mt-10 columns-1 sm:columns-2 lg:columns-3 gap-5">
+                {{ images }}
+                    <div class="mb-5">
+                        <a
+                            href="{{ url }}"
+                            class="chocolat"
+                        >
+                            <img
+                                src="{{ url }}"
+                                alt="{{ alt }}"
+                                class="h-auto w-full"
+                            />
+                        </a>
+                    </div>
+                {{ /images }}
+            </div>
+        </div>
+    </div>
+</section>

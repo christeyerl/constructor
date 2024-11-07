@@ -1,0 +1,55 @@
+<footer>
+    <div class="border-t border-slate-300 px-8 py-10 md:px-16 md:py-20">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-20">
+            <div class="md:col-span-2">
+                <ul class="space-y-3">
+                    <li>
+                        <a
+                            href="mailto:{{ settings:email }}"
+                            class="link text-3xl"
+                        >
+                            {{ settings:email }}
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="tel:{{ settings:phone | replace(' ', '') | trim }}"
+                            class="link text-3xl"
+                        >
+                            {{ settings:phone }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="border-l border-slate-300 pl-8">
+                <a
+                    href="#"
+                    class="link leading-8"
+                >
+                    {{ settings:address:street }}
+                    <br />
+                    {{ settings:address:post_code }}, {{ settings:address:city }}
+                    <br />
+                    {{ settings:address:country }}
+                </a>
+            </div>
+            <div class="border-l border-slate-300 pl-8">
+                <ul>
+                    {{ seo:links }}
+                        <li>
+                            <a
+                                href="{{ url }}"
+                                class="link leading-8"
+                            >
+                                {{ network }}
+                            </a>
+                        </li>
+                    {{ /seo:links }}
+                </ul>
+                <div class="mt-10">
+                    <p class="text-sm text-slate-500">&copy; {{ now | format('Y') }} {{ site:name }}.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

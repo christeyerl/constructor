@@ -1,0 +1,52 @@
+{
+    "name": "christeyerl/constructor",
+    "type": "project",
+    "description": "Website for local construction company",
+    "keywords": ["statamic"],
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^11.30",
+        "statamic/cms": "^5.37",
+        "statamic/ssg": "^3.0.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18.1",
+        "mockery/mockery": "^1.6.12",
+        "nunomaduro/collision": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "pre-update-cmd": [
+            "Statamic\\Console\\Composer\\Scripts::preUpdateCmd"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan statamic:install --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "lint": "pint"
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

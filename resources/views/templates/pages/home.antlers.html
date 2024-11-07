@@ -1,0 +1,49 @@
+<header>
+    <div class="absolute left-14 top-12 z-10">
+        <div class="space-y-10 text-white">
+            <a
+                href="/"
+                aria-label="Späť na úvod"
+            >
+                {{ partial:art.logo class="h-11 w-auto fill-current transition-transform duration-300 hover:scale-110" }}
+            </a>
+            <nav class="space-y-2">
+                {{ nav:main_menu }}
+                    <a
+                        href="{{ url }}"
+                        class="link block w-fit text-sm uppercase"
+                    >
+                        {{ title }}
+                    </a>
+                {{ /nav:main_menu }}
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section>
+        <div class="swiper h-screen">
+            <div
+                id="main-slider"
+                class="swiper-wrapper"
+            >
+                {{ nav:main_menu }}
+                    {{ if cover_image }}
+                        <div
+                            id="{{ slug }}"
+                            class="swiper-slide"
+                        >
+                            <div class="absolute inset-0 bg-black/30"></div>
+                            <img
+                                src="{{ cover_image.url }}"
+                                alt="{{ cover_image.alt }}"
+                                class="size-full object-cover"
+                            />
+                        </div>
+                    {{ /if }}
+                {{ /nav:main_menu }}
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,33 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url(https://fonts.bunny.net/css?family=space-grotesk:400,700) layer(base);
+
+@layer base {
+    body {
+        @apply font-space text-base antialiased selection:bg-black selection:text-white;
+    }
+}
+
+@layer components {
+    .link {
+        background-image: linear-gradient(to top, currentColor 1px, transparent 0);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 0 100%;
+        background-position-x: 100%;
+        transition: background-size .8s cubic-bezier(.33,.02,0,.93);
+    }
+
+    .link:hover {
+        background-size: 100% 100%;
+        background-position-x: 0;
+    }
+}
+
+@layer utilities {
+    [x-cloak] {
+        @apply !hidden;
+    }
+}

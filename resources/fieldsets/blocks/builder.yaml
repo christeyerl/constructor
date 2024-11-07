@@ -1,0 +1,149 @@
+title: Blocks/Builder
+fields:
+  -
+    handle: builder
+    field:
+      type: replicator
+      display: Builder
+      hide_display: true
+      sets:
+        '':
+          display: null
+          sets:
+            gallery:
+              display: Gallery
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: images
+                  field:
+                    container: assets
+                    type: assets
+                    display: Images
+                    min_files: 1
+                    mode: grid
+            testimonials:
+              display: Testimonials
+              icon: text-formatting-quotation
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    validate:
+                      - required
+                -
+                  handle: testimonials
+                  field:
+                    mode: stacked
+                    type: grid
+                    display: Testimonials
+                    min_rows: 1
+                    add_row: 'Add new testimonial'
+                    fields:
+                      -
+                        handle: quote
+                        field:
+                          type: textarea
+                          display: Quote
+                      -
+                        handle: author
+                        field:
+                          type: text
+                          display: Author
+            text:
+              display: Text
+              icon: text-formatting-text-box-1
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: markdown
+                    display: Text
+            features:
+              display: Features
+              icon: addon-boxes-stack
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    validate:
+                      - required
+                -
+                  handle: features
+                  field:
+                    mode: stacked
+                    type: grid
+                    display: Features
+                    min_rows: 1
+                    add_row: 'Add new feature'
+                    fields:
+                      -
+                        handle: title
+                        field:
+                          type: text
+                          display: Title
+                      -
+                        handle: description
+                        field:
+                          type: textarea
+                          display: Description
+                      -
+                        handle: icon
+                        field:
+                          type: icon
+                          display: Icon
+            steps:
+              display: Steps
+              icon: arrow-roadmap-path-flow
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: steps
+                  field:
+                    type: grid
+                    display: Steps
+                    mode: stacked
+                    min_rows: 1
+                    add_row: 'Add new step'
+                    fields:
+                      -
+                        handle: title
+                        field:
+                          type: text
+                          display: Title
+                      -
+                        handle: description
+                        field:
+                          type: textarea
+                          display: Description
+            image:
+              display: Image
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    mode: grid
+                    container: assets
+                    type: assets
+                    display: Image
