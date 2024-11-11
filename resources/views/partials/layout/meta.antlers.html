@@ -21,7 +21,7 @@
 
 <meta property="og:title" content="{{ (meta_title ?? title) | strip_tags | entities | trim }}" />
 <meta property="og:description" content="{{ meta_description | strip_tags | entities | trim }}" />
-<meta property="og:image" content="{{ og_image ?? settings:og_image ?? '' }}" />
+<meta property="og:image" content="{{ og_image ?? seo:og_image ?? '' }}" />
 <meta property="og:site_name" content="{{ settings:site_title ?? site:name }}" />
 <meta property="og:locale" content="{{ site:locale }}" />
 <meta property="og:url" content="{{ permalink }}" />
