@@ -2,6 +2,7 @@ title: Settings
 data:
   site_title: 'Domov Tech'
   separator: '|'
+  organization: 'Domov Tech'
   phone: '+421 901 234 567'
   email: info@domov.tech
   address:
@@ -11,5 +12,7 @@ data:
     country: Slovensko
   theme_light_color: '#FFFFFF'
   theme_dark_color: '#000000'
+  favicon_svg: favicon.svg
+  marker: marker
   analytics_fathom: false
   analytics_google: false

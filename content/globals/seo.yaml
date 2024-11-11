@@ -1,5 +1,6 @@
 title: SEO
 data:
+  og_image: open-graph.png
   schema_organization:
     company: null
   schema_place:
@@ -15,3 +16,5 @@ data:
       id: m31jexra
       network: Instagram
       url: 'https://instagram.com'
+  sitemap_collections:
+    - pages
