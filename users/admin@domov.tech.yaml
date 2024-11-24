@@ -1,7 +1,7 @@
 name: Admin
 super: true
 id: 059f7396-9170-46d7-9d41-dfe2aeec8d62
-password_hash: $2y$12$uk2dD9xM/Hz69VVabGuFhe7.EBrBaPomrpc4v0Gz5kW2/r7J299Sq
+password_hash: $2y$12$2yl.S/xcWNUHCTmXadjI.uk36kUuu0TnhUpvBNBwWgA8ZR8NOtap6
 preferences:
   nav:
     content:
